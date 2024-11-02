@@ -60,7 +60,7 @@ img.entry-image-icon {
   border-bottom-left-radius: inherit;
   border-top-left-radius: inherit;
 }
-.clipboard-entry-container clipboard-entry-container img.image-entry {
+.clipboard-entry-container .clipboard-entry-container img.image-entry {
   max-height: 32px;
   margin: 4px;
 }
@@ -957,6 +957,12 @@ a.link:hover {
   flex-direction: column;
 }
 
+.setting-properties {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .settings-content {
   padding: 10px;
 }
@@ -1089,6 +1095,36 @@ h3:first-child {
   margin-top: 0;
 }
 
+.hotkey-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+
+.hotkey-option {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  background-color: var(--background-color-darker1);
+  border-radius: 4px;
+}
+
+.add {
+  cursor: pointer;
+  display: block;
+  border: none;
+  background-color: var(--background-color-lighter2);
+  border-radius: 4px;
+  color: var(--textcolor-secondary);
+  line-height: 0;
+  width: 100%;
+}
+.add i {
+  font-size: 16px;
+}
+
 span.highlight {
   background-color: var(--primary-darker);
   border-radius: 2px;
@@ -1131,7 +1167,7 @@ span.highlight {
   cursor: pointer;
 }
 .sc-button:hover {
-  box-shadow: 0 1px 2px rgb(66, 66, 66);
+  box-shadow: 0 1px 2px var(--background-color-darker2);
 }
 .sc-button.primary {
   background-color: var(--primary);
@@ -1158,7 +1194,7 @@ span.highlight {
 .checkbox-container {
   user-select: none;
   border-radius: 4px;
-  background-color: var(--border-color);
+  background-color: var(--background-color-lighter1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1211,7 +1247,7 @@ span.highlight {
 .combination-wrapper {
   user-select: none;
   border-radius: 4px;
-  background-color: var(--border-color);
+  background-color: var(--background-color-lighter1);
   background-color: var(--border-color);
   color: var(--textcolor-primary);
   display: flex;
@@ -1315,7 +1351,7 @@ span.highlight {
   flex-direction: row;
   user-select: none;
   border-radius: 4px;
-  background-color: var(--border-color);
+  background-color: var(--background-color-lighter1);
   position: relative;
 }
 .sc-form-field.select .select-wrapper select {
@@ -1417,7 +1453,7 @@ input::-webkit-inner-spin-button {
 .value-viewer-container {
   user-select: none;
   border-radius: 4px;
-  background-color: var(--border-color);
+  background-color: var(--background-color-lighter1);
   display: flex;
   align-items: center;
   padding: 10px;
@@ -1588,6 +1624,72 @@ img {
   top: 50%;
   right: 0;
   transform: translate(100%, -50%);
+}
+
+.carousel-container {
+  background-color: var(--background-color-darker2);
+  margin: 12px;
+  position: relative;
+  display: flex;
+  border-radius: 4px;
+}
+
+.carousel-item-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.carousel-item-container .carousel-item {
+  box-sizing: border-box;
+  min-width: 100%;
+  max-width: 100%;
+}
+.carousel-item-container .carousel-item.active {
+  display: block;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin: 8px 12px;
+}
+.carousel .carousel-inner {
+  color: var(--textcolor-secondary);
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-indicators-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.carousel-indicators {
+  display: flex;
+  align-items: self-end;
+}
+.carousel-indicators .indicator-container {
+  cursor: pointer;
+  padding: 2px 10px;
+}
+.carousel-indicators .indicator-container:hover .indicator {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.carousel-indicators .indicator-container .indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  position: relative;
+  border: none;
+  padding: 0;
+}
+.carousel-indicators .indicator-container .indicator.active {
+  background-color: white;
 }
 
 /*# sourceMappingURL=smartclip.css.map */
